@@ -1,0 +1,324 @@
+.login-page,
+.signup-page {
+  --auth-accent: #ff385c;
+  --auth-accent-dark: #e31c5f;
+  --auth-ink: #222222;
+  --auth-muted: #717171;
+  --auth-border: #dddddd;
+  min-height: 100vh;
+  color: var(--auth-ink);
+  background:
+    radial-gradient(circle at 12% 12%, rgba(255, 56, 92, 0.12), transparent 30rem),
+    #f7f7f7;
+}
+
+.login-page {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.login-nav {
+  min-height: 5rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem clamp(1.25rem, 4vw, 4rem);
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #ebebeb;
+}
+
+.login-brand-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--auth-accent);
+}
+
+.login-brand-icon {
+  width: 2.35rem;
+  height: 2.35rem;
+  display: grid;
+  place-items: center;
+  color: white;
+  background: var(--auth-accent);
+  border-radius: 50% 50% 48% 48%;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.login-brand-text {
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: -0.06em;
+}
+
+.login-main,
+.signup-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: clamp(2rem, 6vw, 4.5rem) 1.25rem;
+}
+
+.login-card,
+.signup-card {
+  width: 100%;
+  background: white;
+  border: 1px solid rgba(221, 221, 221, 0.9);
+  border-radius: 1.5rem;
+  box-shadow: 0 1.25rem 3.75rem rgba(34, 34, 34, 0.12);
+}
+
+.login-card {
+  max-width: 30rem;
+  padding: clamp(1.75rem, 5vw, 2.75rem);
+  text-align: center;
+}
+
+.login-header-icon {
+  width: 4.25rem;
+  height: 4.25rem;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 1.25rem;
+  color: var(--auth-accent);
+  background: #fff0f3;
+  border-radius: 50%;
+}
+
+.login-header-icon .login-user-icon {
+  width: 2.15rem;
+  max-width: 2.15rem;
+  height: 2.15rem;
+  display: block;
+  flex: none;
+}
+
+.login-title {
+  margin: 0;
+  color: var(--auth-ink);
+  font-size: clamp(1.85rem, 5vw, 2.35rem);
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+.login-subtitle {
+  margin: 0.65rem 0 1.75rem;
+  color: var(--auth-muted);
+}
+
+.login-error-box,
+.signup-error-box {
+  margin-bottom: 1.25rem;
+  padding: 0.85rem 1rem;
+  color: #b42318;
+  background: #fff1f0;
+  border: 1px solid #fecdca;
+  border-radius: 0.75rem;
+  text-align: left;
+}
+
+.login-error-box p,
+.signup-error-box p {
+  margin: 0.2rem 0;
+}
+
+.login-form,
+.signup-form {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.login-field,
+.signup-field {
+  display: grid;
+  gap: 0.45rem;
+  text-align: left;
+}
+
+.login-field label,
+.signup-field label,
+.signup-radio-title {
+  color: #404040;
+  font-size: 0.92rem;
+  font-weight: 650;
+}
+
+.login-field input,
+.signup-field input[type='text'],
+.signup-field input[type='email'],
+.signup-field input[type='password'] {
+  width: 100%;
+  min-height: 3.15rem;
+  padding: 0.75rem 0.9rem;
+  color: var(--auth-ink);
+  background: white;
+  border: 1px solid var(--auth-border);
+  border-radius: 0.75rem;
+  outline: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.login-field input::placeholder,
+.signup-field input::placeholder {
+  color: #a0a0a0;
+}
+
+.login-field input:focus,
+.signup-field input[type='text']:focus,
+.signup-field input[type='email']:focus,
+.signup-field input[type='password']:focus {
+  border-color: var(--auth-accent);
+  box-shadow: 0 0 0 3px rgba(255, 56, 92, 0.14);
+}
+
+.login-submit-btn,
+.signup-submit-btn {
+  width: 100%;
+  min-height: 3.15rem;
+  margin-top: 0.25rem;
+  padding: 0.75rem 1rem;
+  color: white;
+  background: linear-gradient(90deg, var(--auth-accent), var(--auth-accent-dark));
+  border: 0;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.65rem 1.25rem rgba(227, 28, 95, 0.2);
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.login-submit-btn:hover:not(:disabled),
+.signup-submit-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 0.8rem 1.5rem rgba(227, 28, 95, 0.26);
+}
+
+.login-submit-btn:focus-visible,
+.signup-submit-btn:focus-visible,
+.login-signup-link a:focus-visible {
+  outline: 3px solid rgba(255, 56, 92, 0.28);
+  outline-offset: 3px;
+}
+
+.login-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin: 1.65rem 0 1.25rem;
+}
+
+.login-divider-line {
+  height: 1px;
+  flex: 1;
+  background: #e5e5e5;
+}
+
+.login-divider-text {
+  color: #9a9a9a;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.login-signup-link {
+  margin: 0;
+  color: var(--auth-muted);
+}
+
+.login-signup-link a {
+  margin-left: 0.4rem;
+  color: var(--auth-accent-dark);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.login-signup-link a:hover {
+  text-decoration: underline;
+}
+
+.signup-page {
+  display: flex;
+}
+
+.signup-card {
+  max-width: 44rem;
+  padding: clamp(1.75rem, 5vw, 3rem);
+}
+
+.signup-header {
+  margin-bottom: 1.75rem;
+  text-align: center;
+}
+
+.signup-header h1 {
+  margin: 0;
+  color: var(--auth-ink);
+  font-size: clamp(1.85rem, 5vw, 2.4rem);
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+.signup-header p {
+  margin: 0.65rem 0 0;
+  color: var(--auth-muted);
+}
+
+.signup-grid.two-cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.signup-radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.signup-radio-group .radio-option,
+.signup-terms .checkbox-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: #404040;
+  cursor: pointer;
+}
+
+.signup-radio-group .radio-option {
+  min-width: 7rem;
+  padding: 0.7rem 0.85rem;
+  background: #fafafa;
+  border: 1px solid var(--auth-border);
+  border-radius: 0.75rem;
+}
+
+.signup-radio-group input,
+.signup-terms input {
+  accent-color: var(--auth-accent);
+}
+
+.signup-terms {
+  text-align: left;
+}
+
+@media (max-width: 640px) {
+  .login-nav {
+    min-height: 4.5rem;
+  }
+
+  .login-main,
+  .signup-main {
+    align-items: flex-start;
+    padding: 1.5rem 1rem;
+  }
+
+  .login-card,
+  .signup-card {
+    padding: 1.5rem;
+    border-radius: 1.15rem;
+  }
+
+  .signup-grid.two-cols {
+    grid-template-columns: 1fr;
+  }
+}
